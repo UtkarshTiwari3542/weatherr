@@ -1,0 +1,28 @@
+.forecast-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .forecast-item {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 120px;
+  }
+  
+  .forecast-item p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .loading-text {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+  }
+  

@@ -1,0 +1,365 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  /* App Container */
+  .app-container {
+    min-height: 100vh;
+    background: linear-gradient(
+      135deg,
+      #1e3c72 0%,
+      #2a5298 50%,
+      #1e3c72 100%
+    );
+    padding: 2rem 1rem;
+  }
+  
+  /* App Title */
+  .app-title {
+    color: white;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* Weather Container */
+  .weather-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+  
+  .weather-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Section Headers */
+  h2 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e1e5eb;
+    padding-bottom: 0.5rem;
+  }
+  
+  h3 {
+    color: #2a5298;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  /* Weather Info Grid */
+  .weather-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  /* Weather Detail Cards */
+  .weather-detail {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .weather-detail:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Weather Icons */
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  /* Search Container */
+  .search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input Styles */
+  input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #e1e5eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 0.8rem 1.5rem;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  button:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  /* Recent Searches Section */
+  .recent-searches {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .search-history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .history-item {
+    background: #ffffff;
+    color: #2a5298;
+    border: 2px solid #2a5298;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .history-item:hover {
+    background: #2a5298;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Forecast Grid */
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .forecast-item {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .forecast-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Loading State */
+  .loading-text {
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+    padding: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 1rem;
+    }
+  
+    .app-title {
+      font-size: 2rem;
+    }
+  
+    .weather-container {
+      padding: 1.5rem;
+      margin: 1rem auto;
+    }
+  
+    .weather-info {
+      grid-template-columns: 1fr;
+    }
+  
+    .search-container {
+      flex-direction: column;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .forecast-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .weather-container {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #2a5298;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e3c72;
+  }
+  
+  /* Temperature Text */
+  .temperature {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3c72;
+  }
+  
+  /* Weather Description */
+  .weather-description {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Error Messages */
+  .error-message {
+    color: #ef4444;
+    background: #fee2e2;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  /* Success Messages */
+  .success-message {
+    color: #059669;
+    background: #d1fae5;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  /* Add these variables at the top of your App.css */
+:root[data-theme="light"] {
+    --bg-primary: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.95);
+    --text-primary: #1e3c72;
+    --text-secondary: #64748b;
+    --card-bg: #ffffff;
+    --border-color: #e1e5eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg: #2a5298;
+    --button-text: white;
+    --hover-bg: #1e3c72;
+  }
+  
+  :root[data-theme="dark"] {
+    --bg-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    --bg-secondary: rgba(30, 41, 59, 0.95);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --button-bg: #3b82f6;
+    --button-text: white;
+    --hover-bg: #2563eb;
+  }
+  
+  /* Update your existing styles to use these variables */
+  .app-container {
+    background: var(--bg-primary);
+  }
+  
+  .weather-container {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  
+  .weather-detail {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+  /* src/CurrentLocationWeather.css */
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-container h2 {
+    margin: 0;
+  }
+  /* Add to your component CSS files */
+
+  
+  /* ... rest of your existing styles ... */
+  
+  /* Continue updating other styles... */

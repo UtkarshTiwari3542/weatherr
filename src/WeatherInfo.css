@@ -1,0 +1,35 @@
+/* WeatherInfo.css */
+.weather-info {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px auto;
+    color: #fff;
+  }
+  
+  .weather-info h1 {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .weather-info h2 {
+    font-size: 24px;
+  }
+  
+  .weather-info h3 {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  
+  .weather-details {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .weather-details p {
+    margin: 5px 0;
+  }
+  
